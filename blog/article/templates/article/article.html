@@ -10,6 +10,9 @@
   <body>
     {% include 'main/menu.html' %}
     <h2>歡迎來到我的部落格</h2>
+    {% for message in messages %}
+     <p class="{{ message.tags }}">{{ message }}</p>
+    {% endfor %}
     <p><a class="btn" href="{% url 'article:articleCreate' %}">新增文章</a></p>
     {% for article, comments in articles.items %}
       <h3>{{ article.title }}</h3>

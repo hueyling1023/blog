@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib import messages
 from article.models import Article,Comment
 from article.forms import ArticleForm
 
@@ -31,4 +32,5 @@ def articleCreate(request):
         return render(request, template, {'articleForm':articleForm})
 
     articleForm.save()
-    return article(request)
+    messages.success(request, '文章已新增')
+    return redirect('article:article')
