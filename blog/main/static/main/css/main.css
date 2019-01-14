@@ -20,6 +20,7 @@ ul#menu li {
 /* Button */
 .btn {
   display: inline-block;
+  font-family: Arial;
   color: black;
   font-size: 0.8em;
   padding: 0.5em 1em;
@@ -41,4 +42,9 @@ ul#menu li {
 .error {
   background-color: #fbd9d8;
   border: thin solid red;
+}
+
+/* Misc */
+.inlineBlock {
+  display: inline-block;
 }
